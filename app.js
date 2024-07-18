@@ -18,9 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function fetchData() {
     try {
-      const customersResponse = await fetch("http://localhost:3000/customers");
+      const customersResponse = await fetch(
+        "https://my-json-server.typicode.com/minanagib112/Customer-Transactions/customers"
+      );
       const transactionsResponse = await fetch(
-        "http://localhost:3000/transactions"
+        "https://my-json-server.typicode.com/minanagib112/Customer-Transactions/transactions"
       );
 
       if (!customersResponse.ok || !transactionsResponse.ok) {
