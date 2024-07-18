@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Transactions</title>
+    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 class="text-center my-5 ">Customer Transactions</h1>
+    <div class="container my-5 d-flex justify-content-center">
+        <input type="text" id="filterName" placeholder="Enter Customer Name">
+        <input type="number" id="filterAmount" placeholder="Enter Transactions Amount">
+    </div>
+    <div class="container">
+        <table class="table table-striped table-hover table-bordered border-dark text-center" id="transactionsTable">
+            <thead>
+                <tr>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center" id="pagination">
+        </ul>
+    </nav>
+    <div id="chartPopup">
+        <button id="closePopup">Close</button>
+        <div id="customerName"></div>
+        <canvas id="chart"></canvas>
+    </div>
+</body>
+
+</html>
